@@ -10,6 +10,9 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ $project->title }}</h4>
                         <p class="card-text">{{ $project->description }}</p>
+                        <div class="badge bg-primary">
+                            {{ $project->type ? $project->type->name : 'Untypized' }}
+                        </div>
                     </div>
                 </div>
             </div>
