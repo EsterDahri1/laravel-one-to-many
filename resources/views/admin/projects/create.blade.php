@@ -79,8 +79,10 @@
                         Github link</label>
                     <div class="input-group">
                         <span class="input-group-text" id="github">https://</span>
-                        <input type="text" name="github" class="form-control" id="github" aria-describedby=""
-                            basic-addon4" value="{{ old('github') }}">
+                        <input type="url" name="github" id="github"
+                            class="form-control @error('github') is-invalid @enderror" placeholder=""
+                            aria-describedby="helpId" value="{{ old('github') }}">
+                        <small id="githubHelper" class="text-muted">Type a Project git Url</small>
                         @error('github')
                             <div class="text-danger"> {{ $message }} </div>
                         @enderror
@@ -98,8 +100,10 @@
                         Link</label>
                     <div class="input-group">
                         <span class="input-group-text" id="link">https://</span>
-                        <input type="text" name="link" class="form-control" id="link" aria-describedby=""
-                            basic-addon4" value="{{ old('link') }}">
+                        <input type="url" name="link" id="link"
+                            class="form-control @error('link') is-invalid @enderror" placeholder=""
+                            aria-describedby="helpId" value="{{ old('link') }}">
+                        <small id="linkHelper" class="text-muted">Type a Project Url</small>
                         @error('link')
                             <div class="text-danger"> {{ $message }} </div>
                         @enderror
