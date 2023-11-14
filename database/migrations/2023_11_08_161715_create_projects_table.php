@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug'); //takes the title and puts it in the URL
             $table->text('description')->nullable();
-            $table->string('github', 2048);
-            $table->string('link', 2048);
+            $table->string('github', 2048)->nullable();
+            $table->string('link', 2048)->nullable();
             $table->timestamps();
         });
     }
